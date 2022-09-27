@@ -1,0 +1,36 @@
+// centrage horizontal + vertical
+
+@mixin center-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// typo titres
+
+@mixin medium-title {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+// style button
+        
+@mixin button($width) {
+    padding: 15px 0;
+    width: $width;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: white;
+    border: none;
+    background: linear-gradient($color-secondary, $color-primary);
+    box-shadow: $button-shadow;
+}
+
+// points de suspension
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

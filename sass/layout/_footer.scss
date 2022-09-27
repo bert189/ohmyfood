@@ -1,0 +1,25 @@
+.footer {
+    color: white;
+    background-color: $dark-grey;
+    padding: 25px;
+
+    &__logo {
+        font-size: 18px;
+    }
+
+    &__liste {
+        padding: 20px 0 10px;
+    }
+
+    & li {
+        padding: 5px 0;
+
+        // &:hover {	
+        //     text-shadow: 0px 0px 6px rgba(255,255,255,0.7);     
+        // }
+    }
+
+    & .fa-handshake-angle {
+        font-size: 11px;
+    }
+}

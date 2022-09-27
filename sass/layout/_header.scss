@@ -1,0 +1,15 @@
+.header {
+    &__logo {
+        @include center-content;
+        height: 60px;
+        padding-top: 10px;
+        font-size: 30px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: white;
+        z-index: 20;
+        box-shadow: 0px -1px 5px 0px $dark-grey;
+    }
+
+}

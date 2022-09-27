@@ -1,0 +1,178 @@
+@use "sass:map"; 
+
+
+// header
+
+.header {
+
+    &__location {
+        @include center-content;
+        height: 45px;
+        background-color: $light-grey;
+        font-weight: 500;
+        margin-top: 60px;
+    }
+
+    &__explore {
+        @include center-content;
+        flex-direction: column;
+        padding: 20px 5% 55px;
+        background-color: $ultralight-grey;
+        
+        & > * {
+            text-align: center;
+        }
+        
+        & h2 {
+            padding: 15px 20px 10px;
+        }
+        
+        & h3 {
+            font-weight: 300;
+            font-size: 18px;
+            padding-bottom: 30px;
+        }
+        
+        & .button {
+            @include button(220px);
+        }
+
+    }
+}
+
+
+// main
+
+section {
+    padding: 50px 20px;
+}
+
+section h4 {
+    padding-bottom: 25px;
+}
+
+// fonctionnement
+
+.fonctionnement {
+
+    & ul {
+        padding-left: 15px;
+    }
+     
+    &__step {
+        background-color: $ultralight-grey;
+        width: 100%;
+        padding: 25px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        font-weight: 700;
+        box-shadow: $step-shadow;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__number {
+        position: absolute;
+        left: -13px;
+        color: white;
+        font-weight: 400;
+        font-size: 14px;
+        background-color: $color-primary;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        @include center-content;
+    }
+
+    & i {
+        @include center-content;
+        width: 35px;
+        margin-right: 15px; 
+        color: $mid-grey;
+        font-size: 20px;
+    }
+
+    &__action {
+        font-size: 17px;
+    }
+}
+
+// restaurants
+
+.restaurants {
+    background-color: $ultralight-grey;
+
+    & h4 {
+        margin-top: 10px;
+    }
+}
+
+.card {
+    border-radius: $card-radius;
+    box-shadow: $card-shadow;
+    margin-bottom: 17px;
+    position: relative;
+
+    & img {
+        border-top-left-radius: $card-radius;
+        border-top-right-radius: $card-radius;
+        height: 175px;
+        width: 100%;
+        // object-fit: cover;
+        object-position: 0 65%;
+    }
+
+    &__text {
+        background-color: white;
+        border-bottom-left-radius: $card-radius;
+        border-bottom-right-radius: $card-radius;
+        height: 75px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & > * {
+            width: calc(50% - map.get($card-text-margin, "left") - map.get($card-text-margin, "right"));
+            height: calc(50% - map.get($card-text-margin, "bottom"));
+            display: flex;
+            flex-direction: column;
+            margin: map.get($card-text-margin,"top") map.get($card-text-margin,"right") map.get($card-text-margin,"bottom") map.get($card-text-margin,"left");
+        }
+
+        & h5 {
+            font-size: 17px;
+            font-weight: 700;
+            justify-content: end;
+            white-space: nowrap;
+        }
+
+        & div {
+            font-size: 16px;
+            justify-content: start;
+        }
+
+        & .fa-heart {
+            font-size: 23px;
+            color: $mid-grey;
+            text-align: end;
+            justify-content: center;
+        }
+    }
+
+    &__new {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        color: darken($color-tertiary, 45%);
+        background-color: $color-tertiary;
+        height: 28px;
+        width: 80px;
+        @include center-content;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 2px;
+    }
+}

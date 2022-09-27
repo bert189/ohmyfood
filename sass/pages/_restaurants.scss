@@ -1,0 +1,118 @@
+
+// header
+
+.header {
+
+    & .fa-arrow-left {
+        position: absolute;
+        top: 22px;
+        left: 20px;
+        font-size: 22px;
+    }
+}
+
+
+// main
+
+main {
+
+    & img {
+        width: 100%;
+        height: 250px;
+        object-position: 0 43%;
+    }
+}
+
+.menu {
+    border-top-left-radius: $menu-radius;
+    border-top-right-radius: $menu-radius;
+    position: relative;
+    top: - $menu-radius;
+    z-index: 10;
+    background-color: $ultralight-grey;
+    margin-bottom: - $menu-radius;
+    padding: 30px 20px 70px;
+
+    & h1 {
+        font-size: 28px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        & .fa-heart {
+            font-size: 25px;
+            color: $dark-grey;
+            margin-right: 15px
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__step {
+
+        & h2 {
+            margin: 35px 0 5px;
+        }
+    }
+
+    &__decoration {
+        height: 3px;
+        width: 42px;
+        background-color: $color-tertiary;
+        margin-bottom: 15px
+    }
+
+    &__choice {
+        background-color: white;
+        border-radius: $card-radius;
+        box-shadow: $card-shadow;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 70px;
+        margin: 0 -5px 15px;
+        padding: 12px 12px 2px;
+
+        & > * {
+            @include ellipsis;
+        }
+        
+        & h3 {
+            font-weight: 700;
+            font-size: 18px;
+            height: 50%;
+            width: calc(100% - $price-width);
+        }
+
+        & p {
+            font-size: 15px;
+            height: 50%;
+            width: calc(100% - $price-width);
+        }
+
+        & .price {
+            font-weight: 700;
+            font-size: 15px;
+            width: $price-width;
+            height: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    & .button {
+        @include button(190px);
+        align-self: center;
+        margin-top: 35px;
+    }
+}
+
+
+
+
