@@ -20,6 +20,19 @@ main {
         width: 100%;
         height: 250px;
         object-position: 0 43%;
+        
+        @include tablet {
+            height: 350px;
+            object-position: 0 55%;
+        }
+    }
+
+
+}
+
+.wide-screen-background {
+    @include wide-screen {
+        background-color: darken(cadetblue, $amount: 15%) ;
     }
 }
 
@@ -50,6 +63,12 @@ main {
     &__wrapper {
         display: flex;
         flex-direction: column;
+
+        @include tablet-landscape {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 
     &__step {
@@ -57,13 +76,24 @@ main {
         & h2 {
             margin: 35px 0 5px;
         }
+        
+        @include tablet-landscape {
+            width: calc((100% - ($choices-space + $choices-overflow + $choices-overflow)) / 2);
+        }
+        @include wide-screen {
+            width: calc((100% - 2 * ($choices-space + $choices-overflow + $choices-overflow)) / 3);
+        }
     }
 
     &__decoration {
         height: 3px;
         width: 42px;
         background-color: $color-tertiary;
-        margin-bottom: 15px
+        margin-bottom: 15px;
+    }
+
+    &__choices {
+        margin: 0 -$choices-overflow;
     }
 
     &__choice {
@@ -74,7 +104,7 @@ main {
         flex-direction: column;
         flex-wrap: wrap;
         height: 70px;
-        margin: 0 -5px 15px;
+        margin-bottom: 15px;
         padding: 12px 12px 2px;
 
         & > * {
@@ -106,10 +136,22 @@ main {
         }
     }
 
+    &__button-wrapper {
+        text-align: center
+    }
+
     & .button {
         @include button(190px);
-        align-self: center;
         margin-top: 35px;
+
+        @include tablet {
+            @include button(350px);
+            font-size: 23px;
+            padding: 26px;
+            border-radius: 50px;
+            margin: 70px 0 30px;
+            letter-spacing: 1px;
+        }
     }
 }
 

@@ -4,8 +4,8 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-$light-grey:rgb(232,232,232);
 $ultralight-grey: rgb(243,243,243);
+$light-grey:rgb(232,232,232);
 $mid-grey: rgb(128,128,128);
 $dark-grey:rgb(60,60,60); 
 
@@ -33,6 +33,34 @@ $card-text-margin: (
     "left": 15px
 );
 
+// retrait + espace choix
+
+$choices-overflow: 5px;
+$choices-space: 15px;
+
+
 // largeur container prix
 
 $price-width: 50px;
+
+
+// breakpoints
+
+$breakpoints: (
+    "tablet": 768px,
+    "tablet-landscape": 992px,
+    "desktop": 1080px,
+    "wide-screen": 1280px
+);
+
+// espaces steps
+
+$steps-space: 35px;
+
+// espace restaurants
+
+$home-section-space: 20px;
+
+// heart width
+
+$heart-width: 55px;

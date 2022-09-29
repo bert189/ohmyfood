@@ -1,3 +1,5 @@
+@use "sass:map"; 
+
 // centrage horizontal + vertical
 
 @mixin center-content{
@@ -34,3 +36,39 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+
+// BREAKPOINTS
+
+// breakpoint tablet
+
+@mixin tablet {
+    @media screen and (min-width: map.get($breakpoints, tablet)) {
+        @content;
+    }
+} 
+
+// breakpoint tablet-landscape
+
+@mixin tablet-landscape {
+    @media screen and (min-width: map.get($breakpoints, tablet-landscape)) {
+        @content;
+    }
+}
+
+// breakpoint desktop
+
+@mixin desktop {
+    @media screen and (min-width: map.get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+// breakpont wide-screen
+
+@mixin wide-screen {
+    @media screen and (min-width: map.get($breakpoints, wide-screen)) {
+        @content;
+    }
+}
+

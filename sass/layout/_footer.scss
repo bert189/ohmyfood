@@ -1,14 +1,33 @@
 .footer {
     color: white;
     background-color: $dark-grey;
-    padding: 25px;
+
+    & .container {
+        padding: 25px;
+    
+        @include tablet {
+            display: flex;
+            padding: 40px 25px 55px;
+        }
+    }
 
     &__logo {
         font-size: 18px;
+        @include tablet {
+            width: 20%;
+        }
     }
 
     &__liste {
         padding: 20px 0 10px;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 80px;
+            padding: 0 50px;
+        }
     }
 
     & li {
@@ -17,6 +36,10 @@
         // &:hover {	
         //     text-shadow: 0px 0px 6px rgba(255,255,255,0.7);     
         // }
+
+        @include tablet {
+            width: 270px;
+        }
     }
 
     & .fa-handshake-angle {
