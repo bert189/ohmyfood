@@ -1,7 +1,7 @@
 .header {
     &__logo {
         @include center-content;
-        height: 60px;
+        height: $logo-height;
         padding-top: 10px;
         font-size: 30px;
         position: fixed;
@@ -10,6 +10,11 @@
         background-color: white;
         z-index: 20;
         box-shadow: 0px -1px 5px 0px $dark-grey;
+    
+        @include desktop {
+            height: calc($logo-height + $logo-height-grow);
+            font-size: 45px;
+            padding-top: 5px;
+        }
     }
-
 }

@@ -85,6 +85,13 @@ body {
   z-index: 20;
   box-shadow: 0px -1px 5px 0px rgb(60, 60, 60);
 }
+@media screen and (min-width: 1080px) {
+  .header__logo {
+    height: 80px;
+    font-size: 45px;
+    padding-top: 5px;
+  }
+}
 
 .footer {
   color: white;
@@ -96,7 +103,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer .container {
     display: flex;
-    padding: 40px 25px 55px;
+    padding: 40px 35px 55px;
   }
 }
 .footer__logo {
@@ -135,10 +142,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45px;
+  height: 50px;
   background-color: rgb(232, 232, 232);
   font-weight: 500;
   margin-top: 60px;
+}
+@media screen and (min-width: 1080px) {
+  .header__location {
+    margin-top: 80px;
+  }
 }
 .header__explore {
   display: flex;
@@ -170,15 +182,42 @@ body {
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px, rgba(0, 0, 0, 0.2) 0px 3px 10px;
 }
+@media screen and (min-width: 768px) {
+  .header__explore .button {
+    padding: 15px 0;
+    width: 320px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: white;
+    border: none;
+    background: linear-gradient(#FF79DA, #9356DC);
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px, rgba(0, 0, 0, 0.2) 0px 3px 10px;
+    padding: 22px;
+    border-radius: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
 
 section {
   padding: 50px 20px;
+}
+@media screen and (min-width: 1280px) {
+  section {
+    padding: 50px 35px;
+  }
 }
 
 section h4 {
   padding-bottom: 25px;
 }
 
+@media screen and (min-width: 1080px) {
+  .fonctionnement {
+    padding-bottom: 80px;
+  }
+}
 .fonctionnement ul {
   padding-left: 15px;
 }
@@ -213,12 +252,20 @@ section h4 {
   font-weight: 400;
   font-size: 14px;
   background-color: #9356DC;
-  height: 25px;
-  width: 25px;
+  height: 26px;
+  width: 26px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__number {
+    height: 34px;
+    width: 34px;
+    left: -17px;
+    font-size: 20px;
+  }
 }
 .fonctionnement i {
   display: flex;
@@ -229,12 +276,27 @@ section h4 {
   color: rgb(128, 128, 128);
   font-size: 20px;
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement i {
+    font-size: 25px;
+  }
+}
 .fonctionnement__action {
   font-size: 17px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__action {
+    font-size: 18px;
+  }
 }
 
 .restaurants {
   background-color: rgb(243, 243, 243);
+}
+@media screen and (min-width: 768px) {
+  .restaurants {
+    padding-bottom: 80px;
+  }
 }
 .restaurants h4 {
   margin-top: 10px;
@@ -255,12 +317,18 @@ section h4 {
 }
 @media screen and (min-width: 768px) {
   .card {
-    width: calc(50% - 10px);
+    width: calc((100% - 20px) / 2);
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1080px) {
   .card {
-    width: calc(25% - 15px);
+    width: calc((100% - 60px) / 4);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card {
+    width: calc((100% - 75px) / 4);
   }
 }
 .card img {
@@ -294,6 +362,11 @@ section h4 {
   justify-content: end;
   white-space: nowrap;
 }
+@media screen and (min-width: 768px) {
+  .card__text h5 {
+    font-size: 18px;
+  }
+}
 .card__text div {
   font-size: 16px;
   justify-content: start;
@@ -326,6 +399,12 @@ section h4 {
   left: 20px;
   font-size: 22px;
 }
+@media screen and (min-width: 1080px) {
+  .header .fa-arrow-left {
+    top: 30px;
+    left: 30px;
+  }
+}
 
 main img {
   width: 100%;
@@ -335,10 +414,18 @@ main img {
 @media screen and (min-width: 768px) {
   main img {
     height: 350px;
-    object-position: 0 55%;
+    object-position: 0 58%;
   }
 }
 
+.wide-screen-background {
+  margin-top: 60px;
+}
+@media screen and (min-width: 1080px) {
+  .wide-screen-background {
+    margin-top: 80px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .wide-screen-background {
     background-color: #436f70;
@@ -355,12 +442,22 @@ main img {
   margin-bottom: -40px;
   padding: 30px 20px 70px;
 }
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 30px 30px 70px;
+  }
+}
 .menu h1 {
   font-size: 28px;
   font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+@media screen and (min-width: 768px) {
+  .menu h1 {
+    font-size: 30px;
+  }
 }
 .menu h1 .fa-heart {
   font-size: 25px;
@@ -383,12 +480,12 @@ main img {
 }
 @media screen and (min-width: 992px) {
   .menu__step {
-    width: calc((100% - 25px) / 2);
+    width: calc((100% - 35px) / 2);
   }
 }
 @media screen and (min-width: 1280px) {
   .menu__step {
-    width: calc((100% - 50px) / 3);
+    width: calc((100% - 70px) / 3);
   }
 }
 .menu__decoration {

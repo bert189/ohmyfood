@@ -8,6 +8,11 @@
         top: 22px;
         left: 20px;
         font-size: 22px;
+
+        @include desktop {
+            top: 30px;
+            left: 30px;
+        }
     }
 }
 
@@ -23,7 +28,7 @@ main {
         
         @include tablet {
             height: 350px;
-            object-position: 0 55%;
+            object-position: 0 58%;
         }
     }
 
@@ -31,6 +36,12 @@ main {
 }
 
 .wide-screen-background {
+    margin-top: $logo-height;
+
+    @include desktop {
+        margin-top: calc($logo-height + $logo-height-grow);
+    }
+
     @include wide-screen {
         background-color: darken(cadetblue, $amount: 15%) ;
     }
@@ -46,12 +57,21 @@ main {
     margin-bottom: - $menu-radius;
     padding: 30px 20px 70px;
 
+    @include tablet {
+        padding: 30px 30px 70px;
+        
+    }
+
     & h1 {
         font-size: 28px;
         font-weight: 500;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        @include tablet {
+            font-size: 30px;
+        }
 
         & .fa-heart {
             font-size: 25px;
@@ -78,10 +98,10 @@ main {
         }
         
         @include tablet-landscape {
-            width: calc((100% - ($choices-space + $choices-overflow + $choices-overflow)) / 2);
+            width: calc((100% - ($menu-padding-grow + $choices-space + $choices-overflow + $choices-overflow)) / 2);
         }
         @include wide-screen {
-            width: calc((100% - 2 * ($choices-space + $choices-overflow + $choices-overflow)) / 3);
+            width: calc((100% - 2 * ($menu-padding-grow + $choices-space + $choices-overflow + $choices-overflow)) / 3);
         }
     }
 
@@ -104,7 +124,7 @@ main {
         flex-direction: column;
         flex-wrap: wrap;
         height: 70px;
-        margin-bottom: 15px;
+        margin-bottom: $choices-space;
         padding: 12px 12px 2px;
 
         & > * {

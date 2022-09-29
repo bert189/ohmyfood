@@ -7,7 +7,7 @@ $color-tertiary: #99E2D0;
 $ultralight-grey: rgb(243,243,243);
 $light-grey:rgb(232,232,232);
 $mid-grey: rgb(128,128,128);
-$dark-grey:rgb(60,60,60); 
+$dark-grey:rgb(60,60,60);
 
 
 // box-shadow
@@ -17,11 +17,16 @@ $step-shadow: 0px 5px 10px 0px rgba(0,0,0,0.15);
 $card-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
 
 
-
 // border-radius
 
 $card-radius: 15px;
 $menu-radius: 40px;
+
+
+// hauteur logo
+
+$logo-height: 60px;
+$logo-height-grow: 20px;
 
 
 // margins
@@ -37,6 +42,17 @@ $card-text-margin: (
 
 $choices-overflow: 5px;
 $choices-space: 15px;
+
+
+// ajout de padding fontionnement + restaurants wide-screen
+
+$home-section-padding-grow: 15px;
+$restaurants-padding-grow: 5px;
+
+
+// ajout de padding menu tablet + desktop
+
+$menu-padding-grow: 10px;
 
 
 // largeur container prix
