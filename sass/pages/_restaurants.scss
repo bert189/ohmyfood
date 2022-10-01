@@ -35,7 +35,7 @@ main {
 
 }
 
-.wide-screen-background {
+.main-restaurants {
     margin-top: $logo-height;
 
     @include desktop {
@@ -73,10 +73,17 @@ main {
             font-size: 30px;
         }
 
+        @include desktop {
+            font-size: 34px;
+        }
+
         & .fa-heart {
             font-size: 25px;
             color: $dark-grey;
-            margin-right: 15px
+            margin-right: 15px;
+            
+            @include hover-heart;
+
         }
     }
 
@@ -113,7 +120,8 @@ main {
     }
 
     &__choices {
-        margin: 0 -$choices-overflow;
+        margin-left: -$choices-overflow;
+        margin-right: -$choices-overflow;
     }
 
     &__choice {
@@ -121,38 +129,63 @@ main {
         border-radius: $card-radius;
         box-shadow: $card-shadow;
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        justify-content: space-between;
         height: 70px;
         margin-bottom: $choices-space;
-        padding: 12px 12px 2px;
 
-        & > * {
-            @include ellipsis;
+        @include hover {
+            color: rgba($color: #000000, $alpha: 0.8);
+
+            & .fa-circle-check {
+                display: flex;
+            }
+        }
+
+        & .text-wrapper {
+            flex-grow: 1;
+            overflow: hidden;
         }
         
         & h3 {
             font-weight: 700;
             font-size: 18px;
-            height: 50%;
-            width: calc(100% - $price-width);
+            height: 50%;            
+            padding: 12px 12px 0;
+            @include ellipsis;
         }
-
+        
         & p {
             font-size: 15px;
             height: 50%;
-            width: calc(100% - $price-width);
+            padding: 4px 12px 0;
+            @include ellipsis;
         }
-
+        
         & .price {
             font-weight: 700;
             font-size: 15px;
-            width: $price-width;
+            width: 50px;
             height: 100%;
             display: flex;
-            flex-direction: column-reverse;
-            text-align: center;
-            margin-bottom: 10px;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-bottom: 12px;
+            flex-shrink: 0;
+        }
+
+        & .fa-circle-check {
+            background-color: $color-tertiary;
+            color: white;
+            border-top-right-radius: $card-radius;
+            border-bottom-right-radius: $card-radius;
+            align-self: center;
+            height: 70px;
+            @include center-content;
+            width: 65px;
+            font-size: 22px;
+            display: none;
+            flex-shrink: 0;
         }
     }
 
