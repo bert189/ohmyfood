@@ -62,6 +62,19 @@
 }
 
 
+// CHECKED
+
+// coeur checké
+
+@mixin heart-checked {
+    font-weight: 700;
+    background: linear-gradient($color-primary, $color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
 // BREAKPOINTS
 
 // breakpoint tablet

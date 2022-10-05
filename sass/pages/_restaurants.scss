@@ -82,9 +82,19 @@ main {
             color: $dark-grey;
             margin-right: 15px;
             
-            @include hover-heart;
-
+            // @include hover-heart;
+            
+            @include hover;
         }
+
+        & input[type=checkbox] {
+            display: none;
+        }
+
+        & #onclick:checked + label > .fa-heart {
+            @include heart-checked;
+        }
+    
     }
 
     &__wrapper {
@@ -122,6 +132,25 @@ main {
     &__choices {
         margin-left: -$choices-overflow;
         margin-right: -$choices-overflow;
+    
+            & input[type=checkbox] {
+                display: none;
+            }
+    
+            & #onclick-5:checked + label > li,
+            & #onclick-6:checked + label > li,
+            & #onclick-7:checked + label > li,
+            & #onclick-8:checked + label > li,
+            & #onclick-9:checked + label > li,
+            & #onclick-10:checked + label > li,
+            & #onclick-11:checked + label > li,
+            & #onclick-12:checked + label > li,
+            & #onclick-13:checked + label > li {
+
+                & .fa-circle-check {
+                    display: flex;
+                }
+            }
     }
 
     &__choice {
@@ -136,9 +165,9 @@ main {
         @include hover {
             color: rgba($color: #000000, $alpha: 0.8);
 
-            & .fa-circle-check {
-                display: flex;
-            }
+            // & .fa-circle-check {
+            //     display: flex;
+            // }
         }
 
         & .text-wrapper {

@@ -14,5 +14,6 @@
 
     @include hover-light-text(0.45) {
         opacity: 0.93;
+        box-shadow: $button-shadow-hover;
     };
 }

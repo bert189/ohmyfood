@@ -71,6 +71,102 @@ body {
   font-size: 25px;
 }
 
+.lds-container {
+  width: 100%;
+  height: 100vh;
+  z-index: 30;
+  background-color: rgb(60, 60, 60);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: visibility, opacity;
+  transition-duration: 500ms;
+  transition-delay: 2500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #9356DC;
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 32px;
+  left: 32px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 32px;
+  left: 128px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 32px;
+  left: 224px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 128px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 128px;
+  left: 128px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 128px;
+  left: 224px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 224px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 224px;
+  left: 128px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 224px;
+  left: 224px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 .header__logo {
   display: flex;
   align-items: center;
@@ -203,6 +299,7 @@ body {
   cursor: pointer;
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.45);
   opacity: 0.93;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px, rgba(0, 0, 0, 0.23) 0px 4px 12px;
 }
 @media screen and (min-width: 768px) {
   .header__explore .button {
@@ -224,6 +321,7 @@ body {
     cursor: pointer;
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.45);
     opacity: 0.93;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px, rgba(0, 0, 0, 0.23) 0px 4px 12px;
   }
 }
 
@@ -403,7 +501,7 @@ section h4 {
   flex-wrap: wrap;
   justify-content: center;
 }
-.card__text > *:not(.fa-heart) {
+.card__text > *:not(label) {
   width: calc(100% - 55px - 15px - 20px);
   height: calc(50% - 4px);
   display: flex;
@@ -433,6 +531,11 @@ section h4 {
 }
 .card__text .fa-heart:hover {
   cursor: pointer;
+}
+.card__text input[type=checkbox] {
+  display: none;
+}
+.card__text #onclick-1:checked + label > .fa-heart, .card__text #onclick-2:checked + label > .fa-heart, .card__text #onclick-3:checked + label > .fa-heart, .card__text #onclick-4:checked + label > .fa-heart {
   font-weight: 700;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
@@ -533,6 +636,11 @@ main img {
 }
 .menu h1 .fa-heart:hover {
   cursor: pointer;
+}
+.menu h1 input[type=checkbox] {
+  display: none;
+}
+.menu h1 #onclick:checked + label > .fa-heart {
   font-weight: 700;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
@@ -573,6 +681,12 @@ main img {
   margin-left: -5px;
   margin-right: -5px;
 }
+.menu__choices input[type=checkbox] {
+  display: none;
+}
+.menu__choices #onclick-5:checked + label > li .fa-circle-check, .menu__choices #onclick-6:checked + label > li .fa-circle-check, .menu__choices #onclick-7:checked + label > li .fa-circle-check, .menu__choices #onclick-8:checked + label > li .fa-circle-check, .menu__choices #onclick-9:checked + label > li .fa-circle-check, .menu__choices #onclick-10:checked + label > li .fa-circle-check, .menu__choices #onclick-11:checked + label > li .fa-circle-check, .menu__choices #onclick-12:checked + label > li .fa-circle-check, .menu__choices #onclick-13:checked + label > li .fa-circle-check {
+  display: flex;
+}
 .menu__choice {
   background-color: white;
   border-radius: 15px;
@@ -585,9 +699,6 @@ main img {
 .menu__choice:hover {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.8);
-}
-.menu__choice:hover .fa-circle-check {
-  display: flex;
 }
 .menu__choice .text-wrapper {
   flex-grow: 1;
@@ -656,6 +767,7 @@ main img {
   cursor: pointer;
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.45);
   opacity: 0.93;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px, rgba(0, 0, 0, 0.23) 0px 4px 12px;
 }
 @media screen and (min-width: 768px) {
   .menu .button {
@@ -678,6 +790,7 @@ main img {
     cursor: pointer;
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.45);
     opacity: 0.93;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px, rgba(0, 0, 0, 0.23) 0px 4px 12px;
   }
 }
 

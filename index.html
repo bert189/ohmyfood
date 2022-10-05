@@ -9,13 +9,16 @@
     <title>ohmyfood</title>
 </head>
 <body>
+    <div class="lds-container">
+        <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
     <header class="header">
         <h1 class="header__logo logo"><a href="">ohmyfood</a></h1>
         <div class="header__location"><span><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;&nbsp;Paris, Belleville</span></div>        
         <div class="header__explore">
             <h2 class="medium-title">Réservez le menu qui vous convient</h2>
             <h3>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h3>
-            <button class="button"><a href="#restaurants">Explorer nos restaurants</a></button>
+            <div class="button"><a href="#restaurants">Explorer nos restaurants</a></div>
         </div>
     </header>
     <main>
@@ -51,7 +54,7 @@
                             <div class=" card__text">
                                 <h5>La palette du goût</h5>
                                 <div>Ménilmontant</div>
-                                <i class="fa-regular fa-heart"></i>
+                                <input type="checkbox" id="onclick-1"/><label for="onclick-1"><i class="fa-regular fa-heart"></i></label>
                             </div>
                             <div class="card__new">Nouveau</div>
                         </a>
@@ -62,7 +65,7 @@
                             <div class=" card__text">
                                 <h5>La note enchantée</h5>
                                 <div>Charonne</div>
-                                <i class="fa-regular fa-heart"></i>
+                                <input type="checkbox" id="onclick-2"/><label for="onclick-2"><i class="fa-regular fa-heart"></i></label>
                             </div>
                             <div class="card__new">Nouveau</div>
                         </a>
@@ -73,7 +76,7 @@
                             <div class=" card__text">
                                 <h5>À la française</h5>
                                 <div>Cité Rouge</div>
-                                <i class="fa-regular fa-heart"></i>
+                                <input type="checkbox" id="onclick-3"/><label for="onclick-3"><i class="fa-regular fa-heart"></i></label>
                             </div>
                         </a>
                     </li>
@@ -83,7 +86,7 @@
                             <div class=" card__text">
                                 <h5>Le délice des sens</h5>
                                 <div>Folie-Méricourt</div>
-                                <i class="fa-regular fa-heart"></i>
+                                <input type="checkbox" id="onclick-4"/><label for="onclick-4"><i class="fa-regular fa-heart"></i></label>
                             </div>
                         </a>
                     </li>
@@ -98,9 +101,9 @@
                 <li><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;&nbsp;Proposer un restaurant</li>
                 <li><i class="fa-solid fa-handshake-angle"></i>&nbsp;&nbsp;&nbsp;Devenir partenaire</li>
                 <li>Mentions légales</li>
-                <li>Contact</li>
+                <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
             </ul>
         </div>
-    </footer>    
+    </footer>
 </body>
 </html>

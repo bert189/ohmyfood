@@ -238,7 +238,7 @@ section h4 {
         flex-wrap: wrap;
         justify-content: center;
 
-        & > *:not(.fa-heart) {
+        & > *:not(label) {
             width: calc(100% - $heart-width - map.get($card-text-margin, "left") - map.get($card-text-margin, "right"));
             height: calc(50% - map.get($card-text-margin, "bottom"));
             display: flex;
@@ -268,7 +268,21 @@ section h4 {
             color: $mid-grey;
             justify-content: center;
 
-            @include hover-heart;
+            // @include hover-heart;
+
+            @include hover;
+
+        }
+        
+        & input[type=checkbox] {
+            display: none;
+        }
+
+        & #onclick-1:checked + label > .fa-heart,
+        & #onclick-2:checked + label > .fa-heart,
+        & #onclick-3:checked + label > .fa-heart,
+        & #onclick-4:checked + label > .fa-heart {
+            @include heart-checked;
         }
     }
 
