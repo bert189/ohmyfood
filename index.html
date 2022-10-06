@@ -13,15 +13,15 @@
         <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
     <header class="header">
-        <h1 class="header__logo logo"><a href="">ohmyfood</a></h1>
-        <div class="header__location"><span><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;&nbsp;Paris, Belleville</span></div>        
-        <div class="header__explore">
+        <h1 class="header__logo logo home"><a href="">ohmyfood</a></h1>
+        <div class="header__location home"><span><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;&nbsp;Paris, Belleville</span></div>        
+        <div class="header__explore home">
             <h2 class="medium-title">Réservez le menu qui vous convient</h2>
             <h3>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h3>
             <div class="button"><a href="#restaurants">Explorer nos restaurants</a></div>
         </div>
     </header>
-    <main>
+    <main class="home">
         <section class="fonctionnement">
             <div class="container">
                 <h4 class="medium-title">Fonctionnement</h4>
@@ -34,12 +34,12 @@
                     <li class="fonctionnement__step">
                         <div class="fonctionnement__number number">2</div>
                         <i class="fa-solid fa-list-ul"></i>
-                        <div class="fonctionnement__action action">Composer votre menu</div>
+                        <div class="fonctionnement__action action">Composez votre menu</div>
                     </li>
                     <li class="fonctionnement__step">
                         <div class="fonctionnement__number number">3</div>
                         <i class="fa-solid fa-store"></i>
-                        <div class="fonctionnement__action action">Déguster au restaurant</div>
+                        <div class="fonctionnement__action action">Dégustez au restaurant</div>
                     </li>
                 </ul>
             </div>
@@ -51,50 +51,66 @@
                     <li class="card">
                         <a href="restaurants/la-palette-du-gout.html">
                             <img src="images/la-palette-du-gout.jpg" alt="plat servi à la palette du gout">
-                            <div class=" card__text">
-                                <h5>La palette du goût</h5>
-                                <div>Ménilmontant</div>
-                                <input type="checkbox" id="onclick-1"/><label for="onclick-1"><i class="fa-regular fa-heart"></i></label>
-                            </div>
-                            <div class="card__new">Nouveau</div>
                         </a>
+                        <div class="card__description">                        
+                            <div class=" card__text">
+                                <a href="restaurants/la-palette-du-gout.html">
+                                    <h5>La palette du goût</h5>
+                                    <div>Ménilmontant</div>
+                                </a>                            
+                            </div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="card__new">Nouveau</div>
                     </li>
                     <li class="card">
                         <a href="restaurants/la-note-enchantee.html">
                             <img src="images/la-note-enchantee.jpg" alt="plat servi à la note enchantée">
-                            <div class=" card__text">
-                                <h5>La note enchantée</h5>
-                                <div>Charonne</div>
-                                <input type="checkbox" id="onclick-2"/><label for="onclick-2"><i class="fa-regular fa-heart"></i></label>
-                            </div>
-                            <div class="card__new">Nouveau</div>
                         </a>
+                        <div class="card__description">
+                            <div class=" card__text">
+                                <a href="restaurants/la-note-enchantee.html">
+                                    <h5>La note enchantée</h5>
+                                    <div>Charonne</div>
+                                </a>
+                            </div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="card__new">Nouveau</div>
                     </li>
                     <li class="card">
                         <a href="restaurants/a-la-francaise.html">
                             <img src="images/a-la-francaise.jpg" alt="plat servi à la française">
-                            <div class=" card__text">
-                                <h5>À la française</h5>
-                                <div>Cité Rouge</div>
-                                <input type="checkbox" id="onclick-3"/><label for="onclick-3"><i class="fa-regular fa-heart"></i></label>
-                            </div>
                         </a>
+                        <div class="card__description">
+                            <div class=" card__text">
+                                <a href="restaurants/a-la-francaise.html">
+                                    <h5>À la française</h5>
+                                    <div>Cité Rouge</div>
+                                </a>
+                            </div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>        
                     </li>
                     <li class="card">
                         <a href="restaurants/le-delice-des-sens.html">
                             <img src="images/le-delice-des-sens.jpg" alt="plat servi au délice des sens">
-                            <div class=" card__text">
-                                <h5>Le délice des sens</h5>
-                                <div>Folie-Méricourt</div>
-                                <input type="checkbox" id="onclick-4"/><label for="onclick-4"><i class="fa-regular fa-heart"></i></label>
-                            </div>
                         </a>
+                        <div class="card__description">
+                            <div class=" card__text">
+                                <a href="restaurants/le-delice-des-sens.html">
+                                    <h5>Le délice des sens</h5>
+                                    <div>Folie-Méricourt</div>
+                                </a>
+                            </div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer home">
         <div class="container">
             <h1 class="footer__logo logo">ohmyfood</h1>
             <ul class="footer__liste">

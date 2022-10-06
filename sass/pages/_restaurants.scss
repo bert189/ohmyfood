@@ -82,19 +82,10 @@ main {
             color: $dark-grey;
             margin-right: 15px;
             
-            // @include hover-heart;
+            @include hover-heart;
             
             @include hover;
-        }
-
-        & input[type=checkbox] {
-            display: none;
-        }
-
-        & #onclick:checked + label > .fa-heart {
-            @include heart-checked;
-        }
-    
+        }    
     }
 
     &__wrapper {
@@ -132,25 +123,6 @@ main {
     &__choices {
         margin-left: -$choices-overflow;
         margin-right: -$choices-overflow;
-    
-            & input[type=checkbox] {
-                display: none;
-            }
-    
-            & #onclick-5:checked + label > li,
-            & #onclick-6:checked + label > li,
-            & #onclick-7:checked + label > li,
-            & #onclick-8:checked + label > li,
-            & #onclick-9:checked + label > li,
-            & #onclick-10:checked + label > li,
-            & #onclick-11:checked + label > li,
-            & #onclick-12:checked + label > li,
-            & #onclick-13:checked + label > li {
-
-                & .fa-circle-check {
-                    display: flex;
-                }
-            }
     }
 
     &__choice {
@@ -161,13 +133,40 @@ main {
         justify-content: space-between;
         height: 70px;
         margin-bottom: $choices-space;
+        overflow: hidden;
 
         @include hover {
             color: rgba($color: #000000, $alpha: 0.8);
 
-            // & .fa-circle-check {
-            //     display: flex;
-            // }
+            & .check-wrapper {
+                display: flex;
+                animation-duration: 700ms;
+                animation-name: circle-check-slide-in;
+
+                @keyframes circle-check-slide-in {
+                    from {
+                        margin-right: -$circle-check-width;
+                    }
+                    to {
+                        margin-right: 0px;
+                    }
+                    
+                }
+
+                & .fa-circle-check {
+                    animation-duration: 400ms;
+                    animation-name: check-rotate;
+
+                    @keyframes check-rotate {
+                        from {
+                            transform: rotate(-1.8turn);
+                        }
+                        to {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+            }
         }
 
         & .text-wrapper {
@@ -203,7 +202,7 @@ main {
             flex-shrink: 0;
         }
 
-        & .fa-circle-check {
+        & .check-wrapper {
             background-color: $color-tertiary;
             color: white;
             border-top-right-radius: $card-radius;
@@ -211,7 +210,7 @@ main {
             align-self: center;
             height: 70px;
             @include center-content;
-            width: 65px;
+            width: $circle-check-width;
             font-size: 22px;
             display: none;
             flex-shrink: 0;
@@ -236,7 +235,3 @@ main {
         }
     }
 }
-
-
-
-

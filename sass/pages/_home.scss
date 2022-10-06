@@ -1,4 +1,4 @@
-@use "sass:map"; 
+@use "sass:map";
 
 
 // header
@@ -225,22 +225,26 @@ section h4 {
         height: 175px;
         width: 100%;
         object-position: 0 65%;
+        vertical-align: bottom;
     }
 
-    &__text {
+    &__description {
         background-color: white;
         border-bottom-left-radius: $card-radius;
         border-bottom-right-radius: $card-radius;
         height: 75px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;        
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__text {  
+        height: inherit;
+        width: calc(100% - $heart-width);
 
-        & > *:not(label) {
-            width: calc(100% - $heart-width - map.get($card-text-margin, "left") - map.get($card-text-margin, "right"));
-            height: calc(50% - map.get($card-text-margin, "bottom"));
+        & a * {
+            height: calc(50% - (map.get($card-text-margin, "bottom") /2));
             display: flex;
             flex-direction: column;
             margin: map.get($card-text-margin,"top") map.get($card-text-margin,"right") map.get($card-text-margin,"bottom") map.get($card-text-margin,"left");
@@ -259,33 +263,20 @@ section h4 {
 
         & div {
             font-size: 16px;
-            justify-content: start;
-        }
-
-        & .fa-heart {
-            width: $heart-width;
-            font-size: 28px;
-            color: $mid-grey;
-            justify-content: center;
-
-            // @include hover-heart;
-
-            @include hover;
-
-        }
-        
-        & input[type=checkbox] {
-            display: none;
-        }
-
-        & #onclick-1:checked + label > .fa-heart,
-        & #onclick-2:checked + label > .fa-heart,
-        & #onclick-3:checked + label > .fa-heart,
-        & #onclick-4:checked + label > .fa-heart {
-            @include heart-checked;
-        }
+            // justify-content: start; par defaut
+        }        
     }
 
+    & .fa-heart {
+        width: $heart-width;
+        font-size: 28px;
+        color: $mid-grey;
+        justify-content: center;
+
+        @include hover-heart;
+
+    }
+    
     &__new {
         position: absolute;
         top: 13px;
