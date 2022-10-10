@@ -82,8 +82,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation-duration: 700ms;
   animation-name: lds-fade;
+  animation-duration: 700ms;
   animation-delay: 1400ms;
   animation-fill-mode: forwards;
 }
@@ -342,6 +342,7 @@ body {
   background-color: white;
   z-index: 20;
   box-shadow: 0px -1px 5px 0px rgb(60, 60, 60);
+  transition: color 250ms;
 }
 .header__logo:hover {
   cursor: pointer;
@@ -370,6 +371,7 @@ body {
 }
 .footer__logo {
   font-size: 18px;
+  transition: text-shadow 200ms;
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
@@ -394,6 +396,7 @@ body {
 }
 .footer li {
   padding: 5px 0;
+  transition: text-shadow 200ms;
 }
 .footer li:hover {
   cursor: pointer;
@@ -456,6 +459,7 @@ body {
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px, rgba(0, 0, 0, 0.2) 0px 3px 10px;
+  transition: opacity 250ms, box-shadow 250ms;
 }
 .header__explore .button:hover {
   cursor: pointer;
@@ -474,6 +478,7 @@ body {
     border: none;
     background: linear-gradient(#FF79DA, #9356DC);
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px, rgba(0, 0, 0, 0.2) 0px 3px 10px;
+    transition: opacity 250ms, box-shadow 250ms;
     padding: 22px;
     border-radius: 50px;
     font-size: 20px;
@@ -526,10 +531,12 @@ section h4 {
   display: flex;
   align-items: center;
   position: relative;
+  transition: background-color 300ms, box-shadow 300ms;
 }
 .fonctionnement__step:hover {
   cursor: pointer;
   background-color: #f2eafb;
+  box-shadow: 1px 6px 12px 1px rgba(0, 0, 0, 0.17);
 }
 .fonctionnement__step:hover i {
   color: #9356DC;
@@ -580,6 +587,7 @@ section h4 {
   margin-right: 15px;
   color: rgb(128, 128, 128);
   font-size: 20px;
+  transition: color 300ms, opacity 300ms;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement i {
@@ -588,6 +596,7 @@ section h4 {
 }
 .fonctionnement__action {
   font-size: 17px;
+  transition: color 300ms;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement__action {
@@ -619,9 +628,11 @@ section h4 {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   position: relative;
+  transition: box-shadow 300ms;
 }
 .card:hover {
   cursor: pointer;
+  box-shadow: 1px 6px 12px 1px rgba(0, 0, 0, 0.12);
 }
 .card:hover img {
   opacity: 0.9;
@@ -652,6 +663,7 @@ section h4 {
   width: 100%;
   object-position: 0 65%;
   vertical-align: bottom;
+  transition: opacity 300ms;
 }
 .card__description {
   background-color: white;
@@ -678,6 +690,7 @@ section h4 {
   font-weight: 700;
   justify-content: end;
   white-space: nowrap;
+  transition: color 300ms;
 }
 @media screen and (min-width: 768px) {
   .card__text h5 {
@@ -686,6 +699,7 @@ section h4 {
 }
 .card__text div {
   font-size: 16px;
+  transition: color 300ms;
 }
 .card .fa-heart {
   width: 55px;
@@ -762,7 +776,7 @@ main img {
 }
 @media screen and (min-width: 1280px) {
   .main-restaurants {
-    background-color: #436f70;
+    background-color: white;
   }
 }
 
@@ -867,10 +881,12 @@ main img {
   height: 70px;
   margin-bottom: 15px;
   overflow: hidden;
+  transition: color 350ms, box-shadow 350ms;
 }
 .menu__choice:hover {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 6px 12px 1px rgba(0, 0, 0, 0.12);
 }
 .menu__choice:hover .check-wrapper {
   display: flex;
@@ -958,6 +974,7 @@ main img {
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px, rgba(0, 0, 0, 0.2) 0px 3px 10px;
+  transition: opacity 250ms, box-shadow 250ms;
   margin-top: 35px;
 }
 .menu .button:hover {
@@ -977,6 +994,7 @@ main img {
     border: none;
     background: linear-gradient(#FF79DA, #9356DC);
     box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 10px, rgba(0, 0, 0, 0.2) 0px 3px 10px;
+    transition: opacity 250ms, box-shadow 250ms;
     font-size: 23px;
     padding: 26px;
     border-radius: 50px;
@@ -988,6 +1006,86 @@ main img {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.45);
     opacity: 0.93;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 12px, rgba(0, 0, 0, 0.23) 0px 4px 12px;
+  }
+}
+
+.menu__choice:nth-of-type(1) {
+  position: relative;
+  opacity: 0;
+  margin-top: 15px;
+  animation-name: fade-in-choice;
+  animation-duration: 1000ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in-choice {
+  from {
+    top: 25px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.menu__choice:nth-of-type(2) {
+  position: relative;
+  opacity: 0;
+  margin-top: 15px;
+  animation-name: fade-in-choice;
+  animation-duration: 1000ms;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in-choice {
+  from {
+    top: 25px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.menu__choice:nth-of-type(3) {
+  position: relative;
+  opacity: 0;
+  margin-top: 15px;
+  animation-name: fade-in-choice;
+  animation-duration: 1000ms;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in-choice {
+  from {
+    top: 25px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.menu__choice:nth-of-type(4) {
+  position: relative;
+  opacity: 0;
+  margin-top: 15px;
+  animation-name: fade-in-choice;
+  animation-duration: 1000ms;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in-choice {
+  from {
+    top: 25px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
   }
 }
 

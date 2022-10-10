@@ -194,3 +194,28 @@
         }
     }
 }
+
+
+
+// fade in choix menu
+
+@mixin fade-in-choice($duration, $delay) {
+    position: relative;
+    opacity: 0;
+    margin-top: 15px;
+    animation-name: fade-in-choice;
+    animation-duration: $duration;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+
+    @keyframes fade-in-choice {
+        from {
+            top: 25px;
+            opacity: 0;
+        }
+        to {
+            top: 0px;
+            opacity: 1;
+        }
+    }
+}

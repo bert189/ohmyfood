@@ -100,9 +100,11 @@ section h4 {
         display: flex;
         align-items: center;
         position: relative;
+        transition: background-color 300ms, box-shadow 300ms;
 
         @include hover {
             background-color: lighten($color-primary, 35%);
+            box-shadow: $step-shadow-hover;
 
             & i {
                 color: $color-primary;
@@ -152,6 +154,7 @@ section h4 {
         margin-right: 15px; 
         color: $mid-grey;
         font-size: 20px;
+        transition: color 300ms, opacity 300ms;
 
         @include tablet {
             font-size: 25px;
@@ -160,6 +163,7 @@ section h4 {
 
     &__action {
         font-size: 17px;
+        transition: color 300ms;
 
         @include tablet {
             font-size: 18px;
@@ -194,8 +198,10 @@ section h4 {
     box-shadow: $card-shadow;
     margin-bottom: $home-section-space;
     position: relative;
+    transition: box-shadow 300ms;
 
     @include hover {
+        box-shadow: $card-shadow-hover;
          
         & img {
             opacity: 0.9;
@@ -226,6 +232,7 @@ section h4 {
         width: 100%;
         object-position: 0 65%;
         vertical-align: bottom;
+        transition: opacity 300ms;
     }
 
     &__description {
@@ -255,6 +262,7 @@ section h4 {
             font-weight: 700;
             justify-content: end;
             white-space: nowrap;
+            transition: color 300ms;
 
             @include tablet {
                 font-size: 18px;
@@ -264,6 +272,7 @@ section h4 {
         & div {
             font-size: 16px;
             // justify-content: start; par defaut
+            transition: color 300ms;
         }        
     }
 

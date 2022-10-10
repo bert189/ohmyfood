@@ -9,8 +9,8 @@
     top: 0;
     left: 0;
     @include center-content;
-    animation-duration: 700ms;
     animation-name: lds-fade;
+    animation-duration: 700ms;
     animation-delay: 1400ms;
     animation-fill-mode: forwards;
 

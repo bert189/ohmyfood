@@ -31,8 +31,7 @@ main {
             object-position: 0 58%;
         }
     }
-
-
+    
 }
 
 .main-restaurants {
@@ -43,7 +42,7 @@ main {
     }
 
     @include wide-screen {
-        background-color: darken(cadetblue, $amount: 15%) ;
+        background-color: white;
     }
 }
 
@@ -134,9 +133,11 @@ main {
         height: 70px;
         margin-bottom: $choices-space;
         overflow: hidden;
+        transition: color 350ms, box-shadow 350ms;
 
         @include hover {
             color: rgba($color: #000000, $alpha: 0.8);
+            box-shadow: $card-shadow-hover;
 
             & .check-wrapper {
                 display: flex;
@@ -149,8 +150,7 @@ main {
                     }
                     to {
                         margin-right: 0px;
-                    }
-                    
+                    }                    
                 }
 
                 & .fa-circle-check {
@@ -216,15 +216,15 @@ main {
             flex-shrink: 0;
         }
     }
-
+    
     &__button-wrapper {
         text-align: center
     }
-
+    
     & .button {
         @include button(190px);
         margin-top: 35px;
-
+        
         @include tablet {
             @include button(350px);
             font-size: 23px;
@@ -234,4 +234,13 @@ main {
             letter-spacing: 1px;
         }
     }
+}
+
+
+// affichage progressif des choix de plats
+
+@for $i from 1 to $max-choices {
+    .menu__choice:nth-of-type(#{$i}) {
+        @include fade-in-choice($choice-fade-in-duration, $i * $choice-delay);
+    };
 }

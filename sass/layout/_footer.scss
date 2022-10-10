@@ -13,6 +13,7 @@
 
     &__logo {
         font-size: 18px;
+        transition: text-shadow 200ms;
         @include tablet {
             width: 20%;
         }
@@ -34,6 +35,7 @@
 
     & li {
         padding: 5px 0;
+        transition: text-shadow 200ms;
 
         @include hover-light-text(0.35);
 

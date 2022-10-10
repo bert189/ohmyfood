@@ -11,6 +11,7 @@
     border: none;
     background: linear-gradient($color-secondary, $color-primary);
     box-shadow: $button-shadow;
+    transition: opacity 250ms, box-shadow 250ms;
 
     @include hover-light-text(0.45) {
         opacity: 0.93;
